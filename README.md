@@ -1,6 +1,6 @@
 <!--
  *
- * This file is part of ratelimiter-gotgbot (https://github.com/AnimeKaizoku/ratelimiter).
+ * This file is part of ratelimiter-gotgbot (https://github.com/ALiwoto/ratelimiter).
  * Copyright (c) 2021 ALiwoto, Contributors.
  *
  * This library is free: you can redistribute it and/or modify
@@ -19,7 +19,7 @@
 # <p align="center"> Rate Limiter - gotgbot </p>
 
 <p align="center">
-	<a href="https://github.com/AnimeKaizoku/ratelimiter">
+	<a href="https://github.com/ALiwoto/ratelimiter">
 		<img src="./logo.png" alt="ratelimiter-Logo">
 	</a>
 </p>
@@ -29,14 +29,14 @@
 > Edit:		2 Feb 2021				\
 > By:		ALiwoto and Contributors (C)	
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/AnimeKaizoku/ratelimiter.svg)](https://pkg.go.dev/github.com/AnimeKaizoku/ratelimiter) [![Go-linux](https://github.com/AnimeKaizoku/ratelimiter/actions/workflows/go-linux.yml/badge.svg)](https://github.com/AnimeKaizoku/ratelimiter/actions/workflows/go-linux.yml) [![Go-macos](https://github.com/AnimeKaizoku/ratelimiter/actions/workflows/go-macos.yml/badge.svg)](https://github.com/AnimeKaizoku/ratelimiter/actions/workflows/go-macos.yml) [![Go-windows](https://github.com/AnimeKaizoku/ratelimiter/actions/workflows/go-windows.yml/badge.svg)](https://github.com/AnimeKaizoku/ratelimiter/actions/workflows/go-windows.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/ALiwoto/ratelimiter.svg)](https://pkg.go.dev/github.com/ALiwoto/ratelimiter) [![Go-linux](https://github.com/ALiwoto/ratelimiter/actions/workflows/go-linux.yml/badge.svg)](https://github.com/ALiwoto/ratelimiter/actions/workflows/go-linux.yml) [![Go-macos](https://github.com/ALiwoto/ratelimiter/actions/workflows/go-macos.yml/badge.svg)](https://github.com/ALiwoto/ratelimiter/actions/workflows/go-macos.yml) [![Go-windows](https://github.com/ALiwoto/ratelimiter/actions/workflows/go-windows.yml/badge.svg)](https://github.com/ALiwoto/ratelimiter/actions/workflows/go-windows.yml)
 
 <hr/>
 
 ## How to use
 
 ```go
-import "github.com/AnimeKaizoku/ratelimiter/ratelimiter"
+import "github.com/ALiwoto/ratelimiter/ratelimiter"
 
 
 func loadLimiter(d *ext.Dispatcher) {

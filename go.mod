@@ -1,4 +1,4 @@
-module github.com/AnimeKaizoku/ratelimiter
+module github.com/ALiwoto/ratelimiter
 
 go 1.18
 

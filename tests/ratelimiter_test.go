@@ -6,7 +6,7 @@
 package tests
 
 import (
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -15,7 +15,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/AnimeKaizoku/ratelimiter"
+	"github.com/ALiwoto/ratelimiter"
 	"github.com/PaulSonOfLars/gotgbot/v2"
 	"github.com/PaulSonOfLars/gotgbot/v2/ext"
 	"github.com/PaulSonOfLars/gotgbot/v2/ext/handlers"
@@ -42,7 +42,7 @@ func TestRateLimiter(t *testing.T) {
 		}
 
 		var b []byte
-		b, err = ioutil.ReadAll(f)
+		b, err = io.ReadAll(f)
 		if err != nil {
 			t.Errorf("failed to load the config file: %v", err)
 			return
