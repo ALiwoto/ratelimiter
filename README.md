@@ -25,8 +25,8 @@
 </p>
 
 > Name:		Rate Limiter			\
-> Version:	v1.0.7					\
-> Edit:		2 Feb 2021				\
+> Version:	v1.0.10					\
+> Edit:		7 Jan 2024				\
 > By:		ALiwoto and Contributors (C)	
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/ALiwoto/ratelimiter.svg)](https://pkg.go.dev/github.com/ALiwoto/ratelimiter) [![Go-linux](https://github.com/ALiwoto/ratelimiter/actions/workflows/go-linux.yml/badge.svg)](https://github.com/ALiwoto/ratelimiter/actions/workflows/go-linux.yml) [![Go-macos](https://github.com/ALiwoto/ratelimiter/actions/workflows/go-macos.yml/badge.svg)](https://github.com/ALiwoto/ratelimiter/actions/workflows/go-macos.yml) [![Go-windows](https://github.com/ALiwoto/ratelimiter/actions/workflows/go-windows.yml/badge.svg)](https://github.com/ALiwoto/ratelimiter/actions/workflows/go-windows.yml)
@@ -36,7 +36,7 @@
 ## How to use
 
 ```go
-import "github.com/ALiwoto/ratelimiter/ratelimiter"
+import "github.com/ALiwoto/ratelimiter"
 
 
 func loadLimiter(d *ext.Dispatcher) {
@@ -64,6 +64,4 @@ func loadLimiter(d *ext.Dispatcher) {
 
 ## Helpful links:
 
-- [Support group on telegram](https://t.me/KaizokuBots)
-- [Contact maintainer on telegram](https://t.me/Falling_inside_The_Black)
-
+- [Contact maintainer on telegram](https://t.me/ALiwoto)
