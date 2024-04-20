@@ -70,9 +70,11 @@ func TestRateLimiter(t *testing.T) {
 	}
 
 	bot, err := gotgbot.NewBot(token, &gotgbot.BotOpts{
-		Client: http.Client{},
-		DefaultRequestOpts: &gotgbot.RequestOpts{
-			Timeout: 6 * gotgbot.DefaultTimeout,
+		BotClient: &gotgbot.BaseBotClient{
+			Client: http.Client{},
+			DefaultRequestOpts: &gotgbot.RequestOpts{
+				Timeout: 6 * gotgbot.DefaultTimeout,
+			},
 		},
 	})
 	if err != nil {
@@ -80,8 +82,8 @@ func TestRateLimiter(t *testing.T) {
 		return
 	}
 
-	updater := ext.NewUpdater(nil)
-	dispatcher := updater.Dispatcher
+	dispatcher := ext.NewDispatcher(&ext.DispatcherOpts{})
+	updater := ext.NewUpdater(dispatcher, nil)
 	loadHandlers(dispatcher)
 
 	err = updater.StartPolling(bot, &ext.PollingOpts{
@@ -125,7 +127,9 @@ func limitedTrigger(b *gotgbot.Bot, ctx *ext.Context) error {
 	msg := ctx.EffectiveMessage
 	msg.Reply(b, "you have been limited!",
 		&gotgbot.SendMessageOpts{
-			AllowSendingWithoutReply: msg.Chat.Type == "private",
+			ReplyParameters: &gotgbot.ReplyParameters{
+				AllowSendingWithoutReply: msg.Chat.Type == "private",
+			},
 		})
 
 	return nil
