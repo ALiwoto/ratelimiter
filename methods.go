@@ -396,7 +396,7 @@ func (l *Limiter) isExceptionQuery(cq *gotgbot.CallbackQuery) bool {
 	}
 
 	for _, ex := range l.exceptionIDs {
-		if ex == cq.From.Id || (cq.Message != nil && ex == cq.Message.Chat.Id) {
+		if ex == cq.From.Id || (cq.Message != nil && ex == cq.Message.GetChat().Id) {
 			return true
 		}
 	}
@@ -436,7 +436,7 @@ func (l *Limiter) isIgnoredExceptionQuery(cq *gotgbot.CallbackQuery) bool {
 	}
 
 	for _, ex := range l.ignoredExceptions {
-		if ex == cq.From.Id || (cq.Message != nil && ex == cq.Message.Chat.Id) {
+		if ex == cq.From.Id || (cq.Message != nil && ex == cq.Message.GetChat().Id) {
 			return true
 		}
 	}
